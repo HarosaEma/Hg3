@@ -20,6 +20,13 @@ public class RegistrationSystem {
         this.studentRepository=studentrepo;
         this.courseRepository=courserepo;
     }
+
+    /**
+     * method for register the student and the course
+     * @param course
+     * @param student
+     * @return
+     */
     public boolean register(Course course, Student student){
         int i=0;
         while(i<courseRepository.courseList.size()){
@@ -35,6 +42,11 @@ public class RegistrationSystem {
 
 
     };
+
+    /**
+     * this method  retrieve courses with free places
+     * @return
+     */
     public List<Course> retrieveCoursesWithFreePlaces() {
         List<Course> auxList=new ArrayList<Course>();
         int i = 0;
@@ -47,6 +59,12 @@ public class RegistrationSystem {
         }
         return auxList;
     }
+
+    /**
+     * this method retrieve students enrolled for a course
+     * @param course
+     * @return
+     */
     public List<Student> retrieveStudentsEnrolledForACourse(Course course){
         int i=0;
         while(i<courseRepository.courseList.size()){
@@ -57,6 +75,11 @@ public class RegistrationSystem {
         }
         return null;
     }
+
+    /**
+     * this method get all courses
+     * @return
+     */
     public List<Course> getAllCourses(){
         int i=0;
         List<Course> auxCourses=new ArrayList<>();
@@ -66,6 +89,11 @@ public class RegistrationSystem {
         }
         return auxCourses;
     }
+
+    /**
+     * this method print all courses
+     * @param courseList list of courses
+     */
     static void printAllCourses(List<Course> courseList){
         int i=0;
         List<Course> auxCourses=new ArrayList<>();
@@ -75,6 +103,11 @@ public class RegistrationSystem {
             i++;
         }
     }
+
+    /**
+     * this method print all students enrolled for a course
+     * @param studentList list of students
+     */
     static void printAllStudentsEnrolledForACourse(List<Student> studentList) {
         int i = 0;
         List<Student> auxStudents = new ArrayList<>();

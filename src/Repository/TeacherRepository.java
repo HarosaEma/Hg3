@@ -10,6 +10,11 @@ public class TeacherRepository implements IRepository {
         teacherList=new ArrayList<Teacher>();
     }
     public List<Teacher> teacherList;
+
+    /**
+     * this method deletes the teacher by id
+     * @param id
+     */
     @Override
     public void delete(long id) {
         int i=0;
@@ -20,6 +25,12 @@ public class TeacherRepository implements IRepository {
             }
         }
     }
+
+    /**
+     * this method updates the teacher by id
+     * @param id
+     * @throws Exception
+     */
 
     @Override
     public void update(long id) throws Exception{
@@ -36,6 +47,11 @@ public class TeacherRepository implements IRepository {
         }
     }
 
+    /**
+     *  method for create a new object, a new teacher and add in the list
+     * @throws Exception
+     */
+
 
     @Override
     public void create() throws Exception{
@@ -47,6 +63,11 @@ public class TeacherRepository implements IRepository {
         teacherList.add(auxTeacher);
 
     }
+
+    /**
+     * this method prints the list of teachers
+     * @param id
+     */
 
     @Override
     public void read(long id) {

@@ -10,6 +10,11 @@ public class StudentRepository implements IRepository {
         studentList=new ArrayList<Student>();
     }
     public List<Student> studentList;
+
+    /**
+     * this method deletes the student by id
+     * @param id
+     */
     @Override
     public void delete(long id) {
         int i=0;
@@ -21,6 +26,11 @@ public class StudentRepository implements IRepository {
         }
     }
 
+    /**
+     * this method updates the student by id
+     * @param id
+     * @throws Exception
+     */
     @Override
     public void update(long id) throws Exception {
         throw new Exception();
@@ -35,6 +45,10 @@ public class StudentRepository implements IRepository {
         }
     }
 
+    /**
+     * method for create a new object, a new student and add in the list
+     * @throws Exception
+     */
     @Override
     public void create() throws Exception {
         throw new Exception();
@@ -45,6 +59,10 @@ public class StudentRepository implements IRepository {
         studentList.add(auxStudent);
     }
 
+    /**
+     * this method prints the list of students
+     * @param id
+     */
     @Override
     public void read(long id) {
         int i=0;

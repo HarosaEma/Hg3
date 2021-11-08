@@ -13,6 +13,10 @@ public class CourseRepository implements IRepository {
     }
    public List<Course> courseList;
 
+    /**
+     *  this method deletes the course by id
+     * @param id
+     */
     @Override
     public void delete(long id) {
         int i=0;
@@ -23,6 +27,12 @@ public class CourseRepository implements IRepository {
             }
         }
     }
+
+    /**
+     * this method update the course by id
+     * @param id
+     * @throws Exception
+     */
 
     @Override
     public void update(long id) throws Exception {
@@ -38,6 +48,11 @@ public class CourseRepository implements IRepository {
         }
     }
 
+    /**
+     * method for create a new object, a new course and add in the list
+     * @throws Exception
+     */
+
 
     @Override
     public void create() throws Exception {
@@ -49,6 +64,10 @@ public class CourseRepository implements IRepository {
         courseList.add(auxCourse);
     }
 
+    /**
+     * this method prints the list of courses
+     * @param id
+     */
 
     @Override
     public void read(long id) {
