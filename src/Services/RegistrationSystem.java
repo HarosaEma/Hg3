@@ -50,12 +50,38 @@ public class RegistrationSystem {
     public List<Student> retrieveStudentsEnrolledForACourse(Course course){
         int i=0;
         while(i<courseRepository.courseList.size()){
-
             if(courseRepository.courseList.get(i).courseID==course.courseID){
                return courseRepository.courseList.get(i).studentsEnrolled;
             }
             i++;
         }
         return null;
-    };
+    }
+    public List<Course> getAllCourses(){
+        int i=0;
+        List<Course> auxCourses=new ArrayList<>();
+        while(i<courseRepository.courseList.size()){
+            auxCourses.add(courseRepository.courseList.get(i));
+            i++;
+        }
+        return auxCourses;
+    }
+    static void printAllCourses(List<Course> courseList){
+        int i=0;
+        List<Course> auxCourses=new ArrayList<>();
+        while(i<courseList.size()) {
+            System.out.print(courseList.get(i).courseID +" "+ courseList.get(i).name);
+            System.out.println();
+            i++;
+        }
+    }
+    static void printAllStudentsEnrolledForACourse(List<Student> studentList) {
+        int i = 0;
+        List<Student> auxStudents = new ArrayList<>();
+        while (i < studentList.size()) {
+            System.out.print(studentList.get(i).firstName + " " + studentList.get(i).lastName);
+            System.out.println();
+            i++;
+        }
+    }
 }

@@ -1,9 +1,13 @@
+import Model.Course;
+import Model.Student;
 import Repository.StudentRepository;
 import Repository.TeacherRepository;
 import Repository.CourseRepository;
 import Services.RegistrationSystem;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -20,8 +24,6 @@ public class Main {
         courseRepository.create(2,"Fizica Cuantica",10,teacherRepository.teacherList.get(1),1);
         RegistrationSystem plm=new RegistrationSystem(teacherRepository,studentRepository,courseRepository);
         plm.register(courseRepository.courseList.get(0),studentRepository.studentList.get(0) );
-        plm.retrieveCoursesWithFreePlaces();
-        plm.retrieveStudentsEnrolledForACourse(courseRepository.courseList.get(0));
-
     }
+
 }
