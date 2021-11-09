@@ -1,5 +1,8 @@
 package Repository;
 
+import Model.Course;
+import Model.Teacher;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CourseRepositoryTest {
@@ -14,6 +17,7 @@ class CourseRepositoryTest {
 
     @org.junit.jupiter.api.Test
     void testUpdate() {
+
     }
 
     @org.junit.jupiter.api.Test
